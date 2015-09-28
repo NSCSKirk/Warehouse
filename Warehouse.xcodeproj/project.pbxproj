@@ -10,6 +10,8 @@
 		1E1F6C8C1BB8F32C0036DF72 /* Warehouse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E1F6C8B1BB8F32C0036DF72 /* Warehouse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E1F6C931BB8F32C0036DF72 /* Warehouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1F6C881BB8F32C0036DF72 /* Warehouse.framework */; settings = {ASSET_TAGS = (); }; };
 		1E1F6C981BB8F32C0036DF72 /* WarehouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F6C971BB8F32C0036DF72 /* WarehouseTests.swift */; };
+		1E1F6CA31BB8F4C30036DF72 /* Warehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F6CA21BB8F4C30036DF72 /* Warehouse.swift */; settings = {ASSET_TAGS = (); }; };
+		1E1F6CA41BB8F4C30036DF72 /* Warehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F6CA21BB8F4C30036DF72 /* Warehouse.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		1E1F6C921BB8F32C0036DF72 /* WarehouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarehouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1F6C971BB8F32C0036DF72 /* WarehouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarehouseTests.swift; sourceTree = "<group>"; };
 		1E1F6C991BB8F32C0036DF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1F6CA21BB8F4C30036DF72 /* Warehouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warehouse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 		1E1F6C8A1BB8F32C0036DF72 /* Warehouse */ = {
 			isa = PBXGroup;
 			children = (
+				1E1F6CA21BB8F4C30036DF72 /* Warehouse.swift */,
 				1E1F6C8B1BB8F32C0036DF72 /* Warehouse.h */,
 				1E1F6C8D1BB8F32C0036DF72 /* Info.plist */,
 			);
@@ -142,6 +146,7 @@
 		1E1F6C7F1BB8F32C0036DF72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Winterlane, LLC";
 				TargetAttributes = {
@@ -193,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1F6CA31BB8F4C30036DF72 /* Warehouse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1F6C981BB8F32C0036DF72 /* WarehouseTests.swift in Sources */,
+				1E1F6CA41BB8F4C30036DF72 /* Warehouse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,28 +314,33 @@
 		1E1F6C9D1BB8F32C0036DF72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Warehouse/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.winterlane.Warehouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1E1F6C9E1BB8F32C0036DF72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Warehouse/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.winterlane.Warehouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
