@@ -34,21 +34,22 @@ public protocol WarehouseProduct {
 }
 
 public class Warehouse : NSObject {
+    let WarehouseStorageKey = "WarehouseStorageKey"
+    
     static let internalSharedInstance = Warehouse()
     public class func sharedInstance() -> Warehouse {
         return internalSharedInstance
     }
     
-    let WarehouseStorageKey = "WarehouseStorageKey"
-    
-    var productIdentifiers: [String] {
+    public var productIdentifiers: [String] {
         didSet {
             retrieveProducts()
         }
     }
+    public var invalidIdentifiers = [String]()
+    public var products = [SKProduct]()
+    
     let validator = ReceiptValidator()
-    var invalidIdentifiers = [String]()
-    var products = [SKProduct]()
     var appReceipt: AppReceipt?
     var productPurchaseCompletion: ((WarehouseResult) -> Void)?
     var productRestoreCompletion: ((WarehouseResult) -> Void)?
