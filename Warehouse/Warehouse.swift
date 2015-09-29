@@ -34,7 +34,11 @@ public protocol WarehouseProduct {
 }
 
 public class Warehouse : NSObject {
-    static let sharedInstance = Warehouse()
+    static let internalSharedInstance = Warehouse()
+    public class func sharedInstance() -> Warehouse {
+        return internalSharedInstance
+    }
+    
     let WarehouseStorageKey = "WarehouseStorageKey"
     
     var productIdentifiers: [String] {
